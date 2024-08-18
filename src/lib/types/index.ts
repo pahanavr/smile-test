@@ -25,3 +25,5 @@ export interface User {
   company: Company;
   address: Address;
 }
+
+export type SortOrder = "asc" | "desc" | "none";

@@ -8,6 +8,10 @@
 
   &Title {
     font-size: 20px;
+
+    @media screen and (max-width: 1024px) {
+      font-size: 15px;
+    }
   }
 
   &Input {
@@ -16,5 +20,6 @@
     border-radius: 8px;
     border: none;
     padding: 0 20px;
+    user-select: none;
   }
 }

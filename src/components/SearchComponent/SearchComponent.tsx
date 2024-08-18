@@ -1,6 +1,18 @@
+import { FC } from "react";
 import styles from "./SearchComponent.module.scss";
 
-export const SearchComponent = () => {
+interface SearchComponentProps {
+  onSearch: (value: string) => void;
+  searchValue: string;
+}
+
+export const SearchComponent: FC<SearchComponentProps> = (props) => {
+  const { onSearch, searchValue } = props;
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    onSearch(e.target.value);
+  };
+
   return (
     <div className={styles.search}>
       <label className={styles.searchTitle}>Поиск</label>
@@ -8,6 +20,8 @@ export const SearchComponent = () => {
         className={styles.searchInput}
         type="search"
         placeholder="Найти..."
+        onChange={handleInputChange}
+        value={searchValue}
       />
     </div>
   );
