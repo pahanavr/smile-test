@@ -1,0 +1,17 @@
+.usersItem {
+  display: flex;
+  border-bottom: 1px solid #444;
+
+  &:last-child {
+    border-bottom: none;
+    border-radius: 0 0 8px 8px;
+  }
+
+  &Element {
+    flex: 1;
+    width: 200px;
+    padding: 20px 10px;
+    text-align: left;
+    overflow-wrap: break-word;
+  }
+}
