@@ -12,7 +12,9 @@ export const ListItem: FC<ListItemProps> = (props) => {
     <div className={styles.item}>
       <span className={styles.itemElement}>{item.name}</span>
       <span className={styles.itemElement}>
-        <a href={`mailto:${item.email}`}>{item.email}</a>
+        <a className={styles.itemElementLink} href={`mailto:${item.email}`}>
+          {item.email}
+        </a>
       </span>
       <span className={styles.itemElement}>{item.address.city}</span>
       <span className={styles.itemElement}>{item.company.name}</span>
